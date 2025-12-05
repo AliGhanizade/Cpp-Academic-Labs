@@ -18,18 +18,21 @@ int main(){
 
     //main var
     int NUmberOfTask;
-    const int countOfTasks = 3;
-    string Menu[countOfTasks+3] ={" Please select the task number:",
+    const int countOfTasks = 4;
+    const int countOfMessage = 3;
+
+    string Menu[countOfTasks+countOfMessage] ={" Please select the task number:",
         " 1- Max Number Function",
         " 2- Divisibility Function",
         " 3- Fibonacci Function ",
+        " 4- Array Function ",
         " 0- Exit ",
         "Your Choice: "} ;
 
 
 
     for (;;) {
-        for (int i = 0; i < countOfTasks+3; i++)
+        for (int i = 0; i < countOfTasks+countOfMessage; i++)
         {
             cout << Menu[i] << endl;
         }
@@ -38,14 +41,30 @@ int main(){
          switch (NUmberOfTask) {
             case 1 :
                 MaxNumberFunction();
-            break;
+                break;
             case 2 :
                 DivisibilityFunction();
-            break;
+                break;
             case 3 :
                 FibonacciFunction();
-            break;
-
+                break;
+            case 4 :
+                {
+                    int subTaskNumber;
+                    cout << " Enter Sub Task Number: " << endl;
+                    cout << " 1- Find Two Largest Function " << endl;
+                    cin >> subTaskNumber;
+                    switch (subTaskNumber) {
+                        case 1 :
+                        
+                        FindTwoLargestFunction();
+                            break;
+                        default:
+                            cout << "Invalid sub task number. Please try again." << endl;
+                            break;
+                    }
+                }
+                break;
             case 0 :
                 cout << "Exiting the program. Goodbye!" << endl;
                 return 0;
