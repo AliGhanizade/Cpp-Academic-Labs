@@ -53,12 +53,33 @@ int main(){
                     int subTaskNumber;
                     cout << " Enter Sub Task Number: " << endl;
                     cout << " 1- Find Two Largest Function " << endl;
+                    cout << " 2- Sort Function " << endl;
                     cin >> subTaskNumber;
                     switch (subTaskNumber) {
                         case 1 :
                         
                         FindTwoLargestFunction();
                             break;
+
+                            case 2 :
+                            {
+                                int sortMethod;
+                                cout << " Select Sorting Method: " << endl;
+                                cout << " 1- Bubble Sort " << endl;
+                                cout << " 2- Selection Sort " << endl;
+                                cin >> sortMethod;
+                                switch (sortMethod) {
+                                    case 1 :
+                                        BubbleSortFunction();
+                                        break;
+                                    case 2 :
+                                        SelectionSortFunction();
+                                        break;
+                                    default:
+                                        cout << "Invalid sorting method. Please try again." << endl;
+                                        break;
+                                }
+                            }
                         default:
                             cout << "Invalid sub task number. Please try again." << endl;
                             break;
