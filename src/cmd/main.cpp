@@ -48,7 +48,9 @@ int main(){
             case 3 :
                 FibonacciFunction();
                 break;
-            case 4 :
+            case 5 :
+                ConvertDecimalToBinaryFunction();
+                break;
                 {
                     int subTaskNumber;
                     cout << " Enter Sub Task Number: " << endl;
